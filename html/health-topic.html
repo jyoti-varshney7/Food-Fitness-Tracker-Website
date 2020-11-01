@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../CSS/health.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Food & Fitness Tracker</h1>
+      <a href=""><img src="../image/everyday-health-01.png" alt="" /></a>
+      <input type="checkbox" name="" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+      </label>
+    </header>
+    <div id="navbar">
+      <ul>
+        <li><a href="#health">HEALTH TOPIC</a></li>
+        <li><a href="#food">FOOD & EATING</a></li>
+        <li><a href="#excercise">EXCERCISE</a></li>
+        <li><a href="#newandalert">NEWS & ALERTS</a></li>
+        <li><a href="#corona">CORONAVIRUS & COVID-19</a></li>
+        <li><a class="login">LOG IN</a></li>
+      </ul>
+    </div>
+
+    <aside class="side-navigation d-none d-lg-block">
+      <div class="blog-accordion" id="accordionBlogNav">
+        <div class="_item">
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/library.html"
+                class="btn btn-link"
+                role="button"
+                style="padding-bottom: 0"
+              >
+                MyNetDiary Library
+              </a>
+            </h5>
+          </div>
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/keto-diet-library.html"
+                class="btn btn-link collapsed"
+                role="button"
+                style="padding-bottom: 0; padding-left: 20px"
+              >
+                Keto Diet
+              </a>
+            </h5>
+          </div>
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/low-carb-diet-library.html"
+                class="btn btn-link collapsed"
+                role="button"
+                style="padding-bottom: 0; padding-left: 20px"
+              >
+                Low-Carb Diet
+              </a>
+            </h5>
+          </div>
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/mediterranean-diet-library.html"
+                class="btn btn-link collapsed"
+                role="button"
+                style="padding-bottom: 0; padding-left: 20px"
+              >
+                Mediterranean Diet
+              </a>
+            </h5>
+          </div>
+        </div>
+        <div class="_item">
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/authors.html"
+                class="btn btn-link collapsed"
+                role="button"
+              >
+                Dietitian Team
+              </a>
+            </h5>
+          </div>
+        </div>
+        <div class="_item">
+          <div class="_item-header" id="heading-1">
+            <h5 class="_headline mb-0">
+              <a
+                onclick="document.location='/blog.html';return false;"
+                href="/blog.html"
+                class="btn btn-link collapsed"
+                role="button"
+                data-toggle="collapse"
+                id="collapseBlog"
+                data-target="#collapseBlogCategories"
+                aria-expanded="true"
+                aria-controls="#collapseBlogCategories"
+              >
+                Dietitian’s Blog
+              </a>
+            </h5>
+          </div>
+          <div
+            id="collapseBlogCategories"
+            class="collapse"
+            aria-labelledby="heading-1"
+            data-parent="#accordionBlogNav"
+          >
+            <div class="accordion" id="accordionBlogSubNav-1"></div>
+          </div>
+        </div>
+        <div class="_item">
+          <div class="_item-header">
+            <h5 class="_headline mb-0">
+              <a
+                href="/mynetdiaryNews.html"
+                class="btn btn-link collapsed"
+                role="button"
+              >
+                In the News
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>
