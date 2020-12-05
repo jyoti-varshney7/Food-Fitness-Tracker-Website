@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+     <link rel="stylesheet" href="../CSS/health.css" />
+
+<style>
+.container {
+    background-color: green;
+}
+</style>
+    <title>BMI</title>
+</head>
+<body>
+<body onload="myfunction()">
+    <div id="loading"></div>
+
+    <header>
+      <h1>Food & Fitness Tracker</h1>
+      <a href="../index.html"><img src="../image/everyday-health-01.png" alt="" /></a>
+      <input type="checkbox" name="" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+      </label>
+    </header>
+    <div id="navbar">
+      <ul>
+        <li><a href="../html/health-topic.html">HEALTH TOPIC</a></li>
+        <li><a href="../food.html">FOOD & EATING</a></li>
+        <li><a href="#excercise">EXCERCISE</a></li>
+        <li><a href="../html/Bmi.html">BMI CALCULATOR</a></li>
+        <li><a href="#corona">CORONAVIRUS & COVID-19</a></li>
+        <li><a href="../html/login.html" class="login">LOG IN</a></li>
+      </ul>
+    </div>
+      <br />
+<div class="container">
+    <div class="card">
+        <div class="card-header">BMI Calculator</div>
+        <div class="card-body">
+            <form class="w-50 m-auto" onsubmit="return false">
+            <div class="form-group">
+                <label>Weight : </label>
+                <input type="number" name="" id="weight" placeholder="Weight in Kg" required class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label>Height : </label>
+                <input type="text" name="" id="height" placeholder="Height in Ft"  required class="form-control"></input>
+            </div>
+            <div class="form-group">
+                <label>BMI : </label>
+                <input type="number" name="" id="bmivalue" class="form-control"></input>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success" onclick="getbmivalue()">Check BMI</button>
+            </div>
+        </form>
+        </div>
+        <div class="card-footer text-center">BMI Categories:
+            Underweight = <18.5,
+            Normal weight = 18.5–24.9,
+            Overweight = 25–29.9,
+            Obesity = BMI of 30 or greater
+        </div>
+    </div>
+</div>
+
+<script>
+    
+
+    function getbmivalue(){
+        var weight = document.getElementById('weight').value;
+        var height = document.getElementById('height').value;
+        height = height * 12;
+        height = height * 0.025; //now height in meter
+
+        var newbmivalue = weight /  (height * height);
+        
+        newbmivalue =  Math.round(newbmivalue);
+        document.getElementById("bmivalue").value = newbmivalue;
+
+    }
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+<script>
+      var preloader = document.getElementById("loading");
+
+      function myfunction() {
+        preloader.style.display = "none";
+      }
+    </script>  
+</body>
+</html>
